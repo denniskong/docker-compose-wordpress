@@ -7,6 +7,7 @@ services:
       - wordpress
     volumes:
       - wordpress-data:/var/www/html
+      - ./wp-plugins/amazon-s3-and-cloudfront.2.3.2:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront
     environment:
       WORDPRESS_DB_HOST: database
       MYSQL_ROOT_PASSWORD: RootSecret
