@@ -1,0 +1,6 @@
+[submodule "wp-plugins/wp-amazon-s3-and-cloudfront-tweaks"]
+	path = wp-plugins/wp-amazon-s3-and-cloudfront-tweaks
+	url = https://github.com/deliciousbrains/wp-amazon-s3-and-cloudfront-tweaks.git
+[submodule "wp-plugins/wp-amazon-s3-and-cloudfront"]
+	path = wp-plugins/wp-amazon-s3-and-cloudfront
+	url = https://github.com/deliciousbrains/wp-amazon-s3-and-cloudfront.git
