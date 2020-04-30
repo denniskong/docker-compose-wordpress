@@ -11,6 +11,8 @@ WordPress Stack with
 - minio
 - memcached
 
+generating a local development environment with target AWS with S3 as media storage
+
 ## Portmapping
 
 ### Nginx
