@@ -2,6 +2,8 @@
 
 Project Status WIP
 
+at current state the plugins must be activated manually
+
 ## Description
 
 ### Stack
