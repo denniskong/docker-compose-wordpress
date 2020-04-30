@@ -7,7 +7,8 @@ services:
       - wordpress
     volumes:
       - wordpress-data:/var/www/html
-      - ./wp-plugins/amazon-s3-and-cloudfront.2.3.2:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront
+      - ./wp-plugins/wp-amazon-s3-and-cloudfront:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront
+      - ./wp-plugins/wp-amazon-s3-and-cloudfront-tweaks:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront-tweaks
     environment:
       WORDPRESS_DB_HOST: database
       MYSQL_ROOT_PASSWORD: RootSecret
@@ -40,7 +41,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - wordpress-data:/var/www/html
-      - nginx-data:/usr/share/nginx/html
+      - ./wp-plugins/wp-amazon-s3-and-cloudfront:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront
+      - ./wp-plugins/wp-amazon-s3-and-cloudfront-tweaks:/var/www/html/wp-content/plugins/amazon-s3-and-cloudfront-tweaks
     depends_on:
       - wordpress
   minio:
@@ -58,9 +60,13 @@ services:
       MINIO_SECRET_KEY: AdminSecretKey
     ports:
       - "6090:9000"
+    networks:
+      - wordpress
   memcached:
     image: memcached
     command: memcached -m 32
+    networks:
+      - wordpress
       
 volumes:
   wordpress-data:
