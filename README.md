@@ -31,7 +31,6 @@ Not exposed
 - ssl
 - passwords
 - configure WordPress
-  - use MeidiaPlugin with local S3 (minio)
   - use memcached 
 
 
@@ -40,3 +39,4 @@ Not exposed
 - https://min.io/
 - https://spinupwp.com/page-caching-varnish-vs-nginx-fastcgi-cache-2018/
 - https://easyengine.io/wordpress-nginx/tutorials/single-site/fastcgi-cache-with-purging/
+- https://github.com/deliciousbrains/wp-amazon-s3-and-cloudfront-tweaks
