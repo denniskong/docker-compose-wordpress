@@ -17,6 +17,7 @@ generating a local development environment with target AWS with S3 as media stor
 ### Benefits
 - Speeds up generating clones and development environments since the technolgy stack which is used is the same.
 - Mimicks stateless part of the stack => application server (php-fpm)
+- Therefore all creteria is met to Host on "AWS ECS Fargate"
 
 
 ## Portmapping
